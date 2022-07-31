@@ -1,0 +1,7 @@
+.btns {
+  margin: 0 auto 35px auto;
+  max-width: 265px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

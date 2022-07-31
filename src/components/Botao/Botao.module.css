@@ -1,0 +1,16 @@
+.btn {
+  width: 125px;
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'K2D', sans-serif;
+  background-color: #E92F3A;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #ff0011;
+}
