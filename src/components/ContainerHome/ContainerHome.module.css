@@ -1,8 +1,8 @@
 .container {
   max-width: 1210px;
-  height: 400px;
+  /* height: 400px; */
   padding: 2px 2px 20px 2px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   margin: 0 auto 25px auto;
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
   align-items: center;
   gap: 20px;
 }
-
+/* 
 .container::-webkit-scrollbar {
   width: 10px;      
 }
@@ -22,4 +22,4 @@
 .container::-webkit-scrollbar-thumb {
   background-color: #E92F3A;
   border-radius: 20px;    
-}
+} */

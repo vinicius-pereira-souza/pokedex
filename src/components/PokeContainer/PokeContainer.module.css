@@ -1,5 +1,5 @@
 .container {
-  max-width: 200px;
+  flex: 0 0 200px;
   height: 250px;
   padding: 15px;
   border-radius: 20px;
@@ -17,9 +17,9 @@
 }
 
 .container img {
-  max-width: 100%;
+  width: 100%;
   height: 150px;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .numero, .nome {
