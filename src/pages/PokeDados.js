@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import style from './PokeDados.module.css'
 
 function PokeDados() {
   const { id } = useParams()
   const [ pokemon, setPokemon ] = useState({})
   const [ img, setImg ] = useState()
   const [ erro, setErro ] = useState(false)
+  const peso = pokemon.weight * 0.1
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -19,18 +21,25 @@ function PokeDados() {
   }, [id, erro])
 
   return (
-    <>
-      {img && (
-        <div>
-          <img src={img} alt="" />
-          <p>Nome: {pokemon.name}</p>
-          <p>Numero de cadastro: {pokemon.id}</p>
-          <p>Peso: {pokemon.weight * 0.1}Kg</p>
-          <p>Altura: {pokemon.height * 10}Cm</p>
-        </div>
-      )}
-      {erro && <p>Não Temos dados sobre este Pokemon</p>}
-    </>
+    <div className={style.container}>
+      <>
+        {img && (
+          <div className={style.dadosContiner}>
+            <img src={img} alt="" />
+            <div>
+              <p>Nome: {pokemon.name}</p>
+              <p>Numero de cadastro: {pokemon.id}</p>
+              <p>Peso: {peso.toFixed(2)}Kg</p>
+              <p>Altura: {pokemon.height * 10}Cm</p>
+            </div>
+          </div>
+        )}
+        {erro && <p>Não Temos dados sobre este Pokemon</p>}
+      </>
+      <div>
+        <h3>sub Lista</h3>
+      </div>
+    </div>
   )
 }
 
