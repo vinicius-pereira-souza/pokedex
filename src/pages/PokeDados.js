@@ -5,6 +5,7 @@ import Stats from './../components/Stats/Stats';
 import Dados from '../components/Dados/Dados';
 import SubContainer from './../components/Sublista/SubContainer';
 import SubPokemon from '../components/SubPokemon/SubPokemon';
+import Botao from '../components/Botao/Botao';
 
 function PokeDados() {
   const { id } = useParams()
@@ -33,9 +34,10 @@ function PokeDados() {
     .then(r => r.json())
     .then(poke => {
       setPokeDados(poke)
+      setUrl(poke)
     }).catch(err => console.log(err))
 
-  }, [id, erro])
+  }, [id, erro, url])
 
   return (
     <div className={style.container}>

@@ -1,7 +1,7 @@
 .container {
   max-width: 1210px;
   height: 400px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   font-family: 'K2D', sans-serif;
   display: grid;
   grid-template-columns: 1fr 400px;
