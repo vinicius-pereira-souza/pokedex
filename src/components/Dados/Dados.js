@@ -1,18 +1,12 @@
 import style from './Dados.module.css'
 
-function Dados() {
+function Dados({titulo, valor}) {
   return (
-    <div>
-      <div>
-        <h1>Nome</h1>
+    <div className={style.container}>
+      <div className={style.titulo}>
+        <h1>{titulo}</h1>
         <div>
-          <p>charmander</p>
-        </div>
-      </div>
-      <div>
-        <h1>N</h1>
-        <div>
-          <p>4</p>
+          <p>{valor}</p>
         </div>
       </div>
     </div>

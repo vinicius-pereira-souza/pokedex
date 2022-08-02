@@ -1,0 +1,38 @@
+.container {
+  margin: 0 auto;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 60px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.100);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.container:hover {
+  background-color: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+.container > div {
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20px;
+  gap: 5px;
+}
+
+.dado {
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
+}

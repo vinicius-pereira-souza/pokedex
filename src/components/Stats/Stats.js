@@ -1,6 +1,6 @@
 import style from './Stats.module.css'
 
-function Stats({dadasObj}) {
+function Stats({arrStat}) {
   return (
     <div className={style.container}>
       <h1>Estatísticas</h1>
@@ -14,12 +14,12 @@ function Stats({dadasObj}) {
           <span>Velocidade: </span>
         </div>
         <div className={style.progress}>
-          <progress max="100" value="35"></progress>
-          <progress max="100" value="45"></progress>
-          <progress max="100" value="160"></progress>
-          <progress max="100" value="30"></progress>
-          <progress max="100" value="45"></progress>
-          <progress max="100" value="70"></progress>
+          <progress max="100" value={arrStat[0].base_stat}></progress>
+          <progress max="100" value={arrStat[1].base_stat}></progress>
+          <progress max="100" value={arrStat[2].base_stat}></progress>
+          <progress max="100" value={arrStat[3].base_stat}></progress>
+          <progress max="100" value={arrStat[4].base_stat}></progress>
+          <progress max="100" value={arrStat[5].base_stat}></progress>
         </div>
       </div>
     </div>
