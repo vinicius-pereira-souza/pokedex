@@ -14,7 +14,7 @@ function PokeContainer({pokeName}){
       setDados(pokeObj)
       setImagem(pokeObj.sprites.other.dream_world.front_default)
     }).catch(err => console.log(err))
-  }, [])
+  }, [pokeName])
 
   function rediretion() {
     navigate(`/pokemon/${dados.id}`)

@@ -1,13 +1,13 @@
 import style from './SubPokemon.module.css'
 // import img from '../../img/3.svg'
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function SubPokemon({nome}) {
   const [ obj, setObj ] = useState({})
   const [ img, setImg ] = useState()
   const navigate = useNavigate()
-  
+
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`)
     .then(r => r.json())
