@@ -1,11 +1,12 @@
 import style from './SubPokemon.module.css'
 // import img from '../../img/3.svg'
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 function SubPokemon({nome}) {
   const [ obj, setObj ] = useState({})
   const [ img, setImg ] = useState()
+  // let [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -15,18 +16,18 @@ function SubPokemon({nome}) {
       setObj(pokemon)
       setImg(pokemon.sprites.other.dream_world.front_default)
     }).catch(err => console.log(err))
-  }, [])
+  }, [nome])
 
 
   function handleRedirecionar() {
-    navigate(`./pokemon/${obj.id}`)
+    navigate(`../pokemon/${obj.name}/`)
   }
 
   return (
     <>
       {img && (
         <div onClick={handleRedirecionar} className={style.container}>
-            <img className={style.img} src={img} alt="" />
+            <img className={style.img} src={img} alt={`imagem do pokemon ${obj.name}`} />
           <div>
             <span className={style.dado}>{obj.id}</span>
             <span className={style.dado}>{obj.name}</span>
