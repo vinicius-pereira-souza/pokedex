@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import style from './PokeDados.module.css'
+import Stats from './../components/Stats/Stats';
 
 function PokeDados() {
   const { id } = useParams()
