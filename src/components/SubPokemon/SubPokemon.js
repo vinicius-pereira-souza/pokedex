@@ -13,7 +13,7 @@ function SubPokemon({nome}) {
     .then(pokemon => {
       setObj(pokemon)
       setImg(pokemon.sprites.other.dream_world.front_default)
-    }).catch(err => console.log(err))
+    })
   }, [nome])
 
 

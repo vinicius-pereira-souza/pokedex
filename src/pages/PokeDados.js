@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import style from './PokeDados.module.css'
 import Stats from './../components/Stats/Stats';
@@ -18,6 +18,7 @@ function PokeDados() {
   const urlInicial = 'https://pokeapi.co/api/v2/pokemon'
   const [ url, setUrl ] = useState(urlInicial)
   const [ pokeDados, setPokeDados ] = useState()
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -47,8 +48,15 @@ function PokeDados() {
     setUrl(url.previous)
   }
 
+  function voltarAHome() {
+    navigate('/')
+  }
+
   return (
     <div className={style.container}>
+      <div className={style.btnReturn}>
+        <Botao acao={voltarAHome} text="🠔 Voltar"/>
+      </div>
       {img && 
         <>
           <div className={style.pokemon}>
@@ -74,11 +82,10 @@ function PokeDados() {
               <SubPokemon key={poke.name} nome={poke.name}/>
             ))
           )}
-          <SubPokemon/>
         </SubContainer>
         <div className={style.btns}>
-          <Botao text="<" acao={listaAnterior}/>
-          <Botao text=">" acao={proximaLista}/>
+          <Botao text="🠔 Alterior" acao={listaAnterior}/>
+          <Botao text="Proximo 🠖" acao={proximaLista}/>
         </div>
       </div>
     </div>
