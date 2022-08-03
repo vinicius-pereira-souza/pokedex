@@ -1,5 +1,5 @@
 <h1 align="center">PokéDex</h1>
-<hr>
+
 
 <h2>Tecnologias Utilizadas</h2>
 <ul>
