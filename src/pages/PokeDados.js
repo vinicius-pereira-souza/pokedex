@@ -39,6 +39,14 @@ function PokeDados() {
 
   }, [id, erro, url])
 
+  function proximaLista() {
+    setUrl(url.next)
+  }
+
+  function listaAnterior() {
+    setUrl(url.previous)
+  }
+
   return (
     <div className={style.container}>
       {img && 
@@ -59,14 +67,20 @@ function PokeDados() {
           </div>
         </>
       }
-      <SubContainer>
-        {pokeDados && (
-          pokeDados.results.map(poke => (
-            <SubPokemon key={poke.name} nome={poke.name}/>
-          ))
-        )}
-        <SubPokemon/>
-      </SubContainer>
+      <div className={style.containerSubList}>
+        <SubContainer>
+          {pokeDados && (
+            pokeDados.results.map(poke => (
+              <SubPokemon key={poke.name} nome={poke.name}/>
+            ))
+          )}
+          <SubPokemon/>
+        </SubContainer>
+        <div className={style.btns}>
+          <Botao text="<" acao={listaAnterior}/>
+          <Botao text=">" acao={proximaLista}/>
+        </div>
+      </div>
     </div>
   )
 }

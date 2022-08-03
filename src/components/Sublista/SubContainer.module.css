@@ -3,6 +3,21 @@
   height: 400px;
   padding: 5px;
   padding-bottom: 0;
-  border: 1px solid #000;
   overflow-y: scroll;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  background: transparent;
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #E92F3A;
+  border-radius: 20px;
 }

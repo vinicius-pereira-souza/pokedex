@@ -1,6 +1,6 @@
 .container {
   max-width: 1210px;
-  height: 400px;
+  height: 470px;
   margin: 0 auto 30px auto;
   font-family: 'K2D', sans-serif;
   display: grid;
@@ -30,4 +30,16 @@ img {
 
 .pokemon > div {
   max-width: 400px;
+}
+
+.containerSubList {
+  max-width: 300px;
+}
+
+.btns {
+  padding: 10px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
