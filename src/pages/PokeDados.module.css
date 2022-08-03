@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 400px;
   align-items: center;
+  position: relative;
 }
 
 .pokemon {
@@ -42,4 +43,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.btnReturn {
+  position: absolute;
+  top: -103px;
 }
