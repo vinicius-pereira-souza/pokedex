@@ -1,5 +1,13 @@
 <h1 align="center">PokéDex</h1>
 
+[ x ] buscar a lista de pokemon
+[ x ] renderizar cada card com os dados do pokemon
+[ x ] trocar a lista de pokemon com o clique
+[ x ] insirir o id na url da proxima pagina com os dados do pokemon
+[ x ] pegar o id da url para buscar os dados do card clicado
+[ x ] redirecionar para outra pagina com um clique com o valor insirido no input
+[ x ] voltar para pagina inicial com um clique
+
 
 <h2>Tecnologias Utilizadas</h2>
 <ul>
