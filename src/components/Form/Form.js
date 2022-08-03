@@ -1,7 +1,9 @@
 import { useState } from "react"
+import { useNavigate } from 'react-router-dom';
+
 import style from './Form.module.css'
 import Botao from './../Botao/Botao';
-import { useNavigate } from 'react-router-dom';
+
 function Form() {
   const [ valorInput, setValorInput ] = useState('')
   const navigate = useNavigate()
@@ -23,7 +25,7 @@ function Form() {
 
   return (
     <form className={style.formContainer}>
-      <input 
+        <input 
         type="text" 
         name="texto"
         id="texto"
