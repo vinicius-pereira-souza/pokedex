@@ -1,12 +1,10 @@
 import style from './SubPokemon.module.css'
-// import img from '../../img/3.svg'
 import { useState, useEffect } from 'react';
 import {useNavigate } from 'react-router-dom';
 
 function SubPokemon({nome}) {
   const [ obj, setObj ] = useState({})
   const [ img, setImg ] = useState()
-  // let [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
 
   useEffect(() => {
