@@ -5,11 +5,10 @@
 }
 
 body {
-  /* background-image: url('../src/img/baixados.png');
-  background-image: url('../src/img/pokeball-1032.jpg');
+  background-image: url('../src/img/baixados.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; */
-  background: linear-gradient(180deg, #79C9F9 0%, #B0E46A 100%);
+  background-position: center;
+  /* background: linear-gradient(180deg, #79C9F9 0%, #B0E46A 100%); */
   height: 100%;
 }
