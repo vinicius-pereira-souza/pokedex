@@ -6,6 +6,7 @@ import Botao from './../Botao/Botao';
 
 function Form() {
   const [ valorInput, setValorInput ] = useState('')
+  const [ erro, setErro ] = useState(false)
   const navigate = useNavigate()
 
   function handleChange(e) {
@@ -14,12 +15,17 @@ function Form() {
 
   function buscarPokemon(e) {
     e.preventDefault()
-    
+
     fetch(`https://pokeapi.co/api/v2/pokemon/${valorInput}`)
     .then(r => r.json())
     .then(resp => {
-      navigate(`/pokemon/${valorInput}`)
-      setValorInput('')
+      if(valorInput) {
+        navigate(`/pokemon/${valorInput}`)
+        setValorInput('')
+        setErro(false)
+      } else {
+        setErro(true)
+      }
     }).catch(err => console.log(err))
   }
 
@@ -31,8 +37,11 @@ function Form() {
         id="texto"
         placeholder="Digite o nome ou o numero de cadastro"
         onChange={handleChange}
-        value={valorInput}/>
+        value={valorInput}
+        className={`${erro && style.errInput}`}/>
       <Botao acao={buscarPokemon} text="Buscar"/>
+      {erro ? <label className={style.err}>Invalido</label> : undefined}
+      
     </form>
   )
 }
