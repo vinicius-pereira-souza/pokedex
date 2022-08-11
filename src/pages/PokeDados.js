@@ -14,6 +14,7 @@ function PokeDados() {
   const [ erro, setErro ] = useState(false)
   const [ arrStat, setArrStat ] = useState([])
   const peso = pokemon.weight * 0.1
+  const pesoFixed = peso.toFixed(3)
   
   const urlInicial = 'https://pokeapi.co/api/v2/pokemon'
   const [ url, setUrl ] = useState(urlInicial)
@@ -67,7 +68,7 @@ function PokeDados() {
                 <Dados titulo="Numero" valor={`#${pokemon.id}`}/>
               </div>
               <div className={style.dados}>
-                <Dados titulo="Peso" valor={`${peso} Kg`}/>
+                <Dados titulo="Peso" valor={`${pesoFixed} Kg`}/>
                 <Dados titulo="Altura" valor={`${pokemon.height * 10} Cm`}/>
               </div>
               {arrStat && <Stats arrStat={arrStat}/>}

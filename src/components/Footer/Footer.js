@@ -1,10 +1,9 @@
 import style from './Footer.module.css'
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <div className={style.footerContainer}>
-      <p>Feito pro Vinicius <Link to="https://github.com/vinicius-pereira-souza">Link para o GitHub</Link></p>
+      <p>Feito por Vinicius <a href="https://github.com/vinicius-pereira-souza">Link para o GitHub</a></p>
     </div>
   )
 }
