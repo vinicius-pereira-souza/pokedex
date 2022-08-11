@@ -14,3 +14,7 @@
   cursor: pointer;
   background-color: #ff0011;
 }
+
+.btnNone {
+  background-color: #f0959b;
+}

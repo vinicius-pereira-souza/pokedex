@@ -5,6 +5,7 @@
   grid-template-columns: 1fr auto;
   grid-template-rows: 45px;
   gap: 25px;
+  position: relative;
 }
 
 .formContainer input {
@@ -19,4 +20,19 @@
 .formContainer input::placeholder {
   color: #6B6B6B;
   font-weight: 400;
+}
+
+.formContainer input.errInput {
+  border-bottom: 2px solid #E92F3A;
+}
+
+.formContainer label {
+  position: absolute;
+  bottom: -25px;
+  visibility: visible;
+  font-family: 'K2D', sans-serif;
+  position: absolute;
+  bottom: -25px;
+  color: #E92F3A;
+  font-weight: bold;
 }
